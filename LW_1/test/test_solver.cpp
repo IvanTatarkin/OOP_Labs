@@ -88,6 +88,14 @@ TEST(test_11, basic_test_set)
     bool result = solver(day, number);
     ASSERT_TRUE(result == 0); 
 } 
+
+TEST(test_12, basic_test_set) 
+{ 
+    std::string day = "понедельник";
+    int number = 32;
+    bool result = solver(day, number);
+    ASSERT_TRUE(result == 0); 
+} 
  
 int main(int argc, char **argv) { 
     testing::InitGoogleTest(&argc, argv); 
