@@ -18,7 +18,8 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_library(LW3_lib src/lab3.cpp )
+add_library(LW3_lib src/lab3.cpp src/Rectangle.cpp src/Trapezoid.cpp src/Square.cpp)
+
 
 
 add_executable(LW3 main.cpp)
