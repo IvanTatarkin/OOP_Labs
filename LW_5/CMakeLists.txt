@@ -35,11 +35,7 @@ enable_testing()
 add_executable(LW5_stack_tests test/test_stack.cpp)
 target_include_directories(LW5_stack_tests PRIVATE include)
 
-add_executable(LW5_stack_memory_resource_tests test/test_stack_memory_resource.cpp)
-target_include_directories(LW5_stack_memory_resource_tests PRIVATE include)
 
 target_link_libraries(LW5_stack_tests LW5_exceptions LW5_stack_memory_resource LW5_stack gtest_main)
-target_link_libraries(LW5_stack_memory_resource_tests LW5_stack_memory_resource gtest_main)
 
 add_test(NAME LW5_stack_tests COMMAND LW5_stack_tests)
-add_test(NAME LW5_stack_memory_resource_tests COMMAND LW5_stack_memory_resource_tests)

@@ -1,6 +1,8 @@
 #pragma once
 
 #include <vector>
+#include <memory_resource>
+
 
 class StackMemoryResource : public std::pmr::memory_resource {
     struct Block {
