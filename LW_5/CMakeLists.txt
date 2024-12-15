@@ -32,10 +32,10 @@ target_link_libraries(LW5_stack PRIVATE LW5_exceptions)
 
 enable_testing()
 
-add_executable(LW5_stack_tests test/test_stack.cpp)
-target_include_directories(LW5_stack_tests PRIVATE include)
+add_executable(LW5_tests test/test_solver.cpp)
+target_include_directories(LW5_tests PRIVATE include)
 
 
-target_link_libraries(LW5_stack_tests LW5_exceptions LW5_stack_memory_resource LW5_stack gtest_main)
+target_link_libraries(LW5_tests LW5_exceptions LW5_stack_memory_resource LW5_stack gtest_main)
 
-add_test(NAME LW5_stack_tests COMMAND LW5_stack_tests)
+add_test(NAME LW5_tests COMMAND LW5_tests)

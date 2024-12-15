@@ -51,16 +51,9 @@ target_link_libraries(LW6 PRIVATE LW6_editor LW6_observer LW6_exceptions)
 
 enable_testing()
 
-add_executable(LW6_editor_tests test/test_editor.cpp)
-target_include_directories(LW6_editor_tests PRIVATE include)
+add_executable(LW6_tests test/test_solver.cpp)
+target_include_directories(LW6_tests PRIVATE include)
 
 
-target_link_libraries(LW6_editor_tests LW6_observer LW6_editor LW6_factory LW6_npcs LW6_exceptions gtest_main)
-
-add_test(NAME LW6_npcs_tests COMMAND LW6_npcs_tests)
-add_test(NAME LW6_factory_tests COMMAND LW6_factory_tests)
-add_test(NAME LW6_editor_tests COMMAND LW6_editor_tests)
-add_test(NAME LW6_visitor_tests COMMAND LW6_visitor_tests)
-add_test(NAME LW6_array_tests COMMAND LW6_array_tests)
-add_test(NAME LW6_observer_tests COMMAND LW6_observer_tests)
-add_test(NAME LW6_tools_tests COMMAND LW6_tools_tests)
+target_link_libraries(LW6_tests LW6_observer LW6_editor LW6_factory LW6_npcs LW6_exceptions gtest_main)
+add_test(NAME LW6_tests COMMAND LW6_tests)
